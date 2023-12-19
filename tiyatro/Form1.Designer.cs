@@ -122,6 +122,12 @@
             // cmbSahne
             // 
             this.cmbSahne.FormattingEnabled = true;
+            this.cmbSahne.Items.AddRange(new object[] {
+            "Bağcılar Kültür Merkezi",
+            "Atatürk Kültür Merkezi",
+            "Üsküdar",
+            "Fatih Belediyesi",
+            "Küçükçekmece"});
             this.cmbSahne.Location = new System.Drawing.Point(148, 61);
             this.cmbSahne.Name = "cmbSahne";
             this.cmbSahne.Size = new System.Drawing.Size(121, 21);
@@ -158,40 +164,53 @@
             this.dtvBilgi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvBilgi.Location = new System.Drawing.Point(25, 221);
             this.dtvBilgi.Name = "dtvBilgi";
+            this.dtvBilgi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtvBilgi.Size = new System.Drawing.Size(572, 177);
             this.dtvBilgi.TabIndex = 11;
+           
+            this.dtvBilgi.SelectionChanged += new System.EventHandler(this.dtvBilgi_SelectionChanged);
             // 
             // btnEkle
             // 
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Image = global::tiyatro.Properties.Resources._002_add;
+            this.btnEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEkle.Location = new System.Drawing.Point(461, 34);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(123, 48);
             this.btnEkle.TabIndex = 12;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Image = global::tiyatro.Properties.Resources._003_refresh;
+            this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuncelle.Location = new System.Drawing.Point(461, 88);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(123, 48);
             this.btnGuncelle.TabIndex = 13;
             this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Image = global::tiyatro.Properties.Resources._001_remove;
+            this.btnSil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSil.Location = new System.Drawing.Point(461, 138);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(123, 48);
             this.btnSil.TabIndex = 14;
             this.btnSil.Text = "Sil";
+            this.btnSil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // Form1
             // 
